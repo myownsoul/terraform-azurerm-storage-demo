@@ -1,9 +1,11 @@
 variable "resource_group_name" {
   description = "Name of resource group to deploy resources in."
+  default = "resource_group_sandbox"
 }
 
 variable "location" {
   description = "Azure location where resources should be deployed."
+  default     = "westus2"
 }
 
 variable "storage_account_tier" {
@@ -24,7 +26,7 @@ variable "storage_account_tags" {
   description = "The tags to the storage account resources"
 
   default = {
-    environment = "demo"
+    environment = "sandbox"
     createdBy = ""
   }
 }
